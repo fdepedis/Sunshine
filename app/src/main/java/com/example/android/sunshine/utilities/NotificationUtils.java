@@ -46,8 +46,6 @@ public class NotificationUtils {
      */
     private static final int WEATHER_NOTIFICATION_ID = 3004;
 
-    private static final String CHANNEL_ID = "10";
-
     /**
      * Constructs and displays a notification for the newly updated weather for today.
      *
@@ -104,7 +102,7 @@ public class NotificationUtils {
              * finally the text of the notification, which in our case in a summary of today's
              * forecast.
              */
-            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
+            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context)
                     .setColor(ContextCompat.getColor(context,R.color.colorPrimary))
                     .setSmallIcon(smallArtResourceId)
                     .setLargeIcon(largeIcon)

@@ -101,6 +101,20 @@ public class MainActivity extends AppCompatActivity implements
          */
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_loading_indicator);
 
+        /*
+         * A LinearLayoutManager is responsible for measuring and positioning item views within a
+         * RecyclerView into a linear list. This means that it can produce either a horizontal or
+         * vertical list depending on which parameter you pass in to the LinearLayoutManager
+         * constructor. In our case, we want a vertical list, so we pass in the constant from the
+         * LinearLayoutManager class for vertical lists, LinearLayoutManager.VERTICAL.
+         *
+         * There are other LayoutManagers available to display your data in uniform grids,
+         * staggered grids, and more! See the developer documentation for more details.
+         *
+         * The third parameter (shouldReverseLayout) should be true if you want to reverse your
+         * layout. Generally, this is only true with horizontal lists that need to support a
+         * right-to-left layout.
+         */
         LinearLayoutManager layoutManager =
                 new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -136,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements
          * created and (if the activity/fragment is currently started) starts the loader. Otherwise
          * the last created loader is re-used.
          */
-        LoaderManager.getInstance(this).initLoader(ID_FORECAST_LOADER, null, this);
+        getSupportLoaderManager().initLoader(ID_FORECAST_LOADER, null, this);
 
         SunshineSyncUtils.initialize(this);
 
