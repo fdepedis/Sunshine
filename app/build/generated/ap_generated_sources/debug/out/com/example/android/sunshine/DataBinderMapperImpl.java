@@ -7,6 +7,7 @@ import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.view.View;
 import com.example.android.sunshine.databinding.ActivityDetailBindingImpl;
+import com.example.android.sunshine.databinding.ActivityDetailBindingLandImpl;
 import com.example.android.sunshine.databinding.ExtraWeatherDetailsBindingImpl;
 import com.example.android.sunshine.databinding.PrimaryWeatherInfoBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -46,6 +47,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         case  LAYOUT_ACTIVITYDETAIL: {
           if ("layout/activity_detail_0".equals(tag)) {
             return new ActivityDetailBindingImpl(component, view);
+          }
+          if ("layout-land/activity_detail_0".equals(tag)) {
+            return new ActivityDetailBindingLandImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_detail is invalid. Received: " + tag);
         }
@@ -114,10 +118,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
 
     static {
       sKeys.put("layout/activity_detail_0", com.example.android.sunshine.R.layout.activity_detail);
+      sKeys.put("layout-land/activity_detail_0", com.example.android.sunshine.R.layout.activity_detail);
       sKeys.put("layout/extra_weather_details_0", com.example.android.sunshine.R.layout.extra_weather_details);
       sKeys.put("layout/primary_weather_info_0", com.example.android.sunshine.R.layout.primary_weather_info);
     }

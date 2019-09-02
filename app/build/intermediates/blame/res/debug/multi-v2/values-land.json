@@ -12,6 +12,23 @@
                         "endColumns": "69,70,67",
                         "endOffsets": "120,191,259"
                     }
+                },
+                {
+                    "source": "/Users/depedisfl/StudioProjects/Sunshine/app/src/main/res/values-land/dimens.xml",
+                    "from": {
+                        "startLines": "4,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "144,210",
+                        "endColumns": "65,63",
+                        "endOffsets": "205,269"
+                    },
+                    "to": {
+                        "startLines": "5,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "264,330",
+                        "endColumns": "65,63",
+                        "endOffsets": "325,389"
+                    }
                 }
             ]
         }
