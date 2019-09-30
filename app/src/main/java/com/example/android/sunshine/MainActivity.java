@@ -150,7 +150,8 @@ public class MainActivity extends AppCompatActivity implements
          * created and (if the activity/fragment is currently started) starts the loader. Otherwise
          * the last created loader is re-used.
          */
-        getSupportLoaderManager().initLoader(ID_FORECAST_LOADER, null, this);
+        //getSupportLoaderManager().initLoader(ID_FORECAST_LOADER, null, this);
+        LoaderManager.getInstance(this).initLoader(ID_FORECAST_LOADER, null, this);
 
         SunshineSyncUtils.initialize(this);
 
@@ -182,15 +183,6 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    /**
-     * Called by the {@link android.support.v4.app.LoaderManagerImpl} when a new Loader needs to be
-     * created. This Activity only uses one loader, so we don't necessarily NEED to check the
-     * loaderId, but this is certainly best practice.
-     *
-     * @param loaderId The loader ID for which we need to create a loader
-     * @param bundle   Any arguments supplied by the caller
-     * @return A new Loader instance that is ready to start loading.
-     */
     @Override
     public Loader<Cursor> onCreateLoader(int loaderId, Bundle bundle) {
 

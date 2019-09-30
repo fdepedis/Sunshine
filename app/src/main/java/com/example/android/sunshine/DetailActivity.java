@@ -108,7 +108,7 @@ public class DetailActivity extends AppCompatActivity implements
         if (mUri == null) throw new NullPointerException("URI for DetailActivity cannot be null");
 
         /* This connects our Activity into the loader lifecycle. */
-        getSupportLoaderManager().initLoader(ID_DETAIL_LOADER, null, this);
+        LoaderManager.getInstance(this).initLoader(ID_DETAIL_LOADER, null, this);
     }
 
     /**
