@@ -1,18 +1,4 @@
-/*
- * Copyright (C) 2016 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.example.android.sunshine.data;
 
 import android.content.Context;
@@ -32,17 +18,6 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
      */
     public static final String DATABASE_NAME = "weather.db";
 
-    /*
-     * If you change the database schema, you must increment the database version or the onUpgrade
-     * method will not be called.
-     *
-     * The reason DATABASE_VERSION starts at 3 is because Sunshine has been used in conjunction
-     * with the Android course for a while now. Believe it or not, older versions of Sunshine
-     * still exist out in the wild. If we started this DATABASE_VERSION off at 1, upgrading older
-     * versions of Sunshine could cause everything to break. Although that is certainly a rare
-     * use-case, we wanted to watch out for it and warn you what could happen if you mistakenly
-     * version your databases.
-     */
     private static final int DATABASE_VERSION = 3;
 
     public WeatherDbHelper(Context context) {

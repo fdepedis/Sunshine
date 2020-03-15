@@ -1,150 +1,134 @@
 1<?xml version="1.0" encoding="utf-8"?>
-2<!--
-3     Copyright (C) 2016 The Android Open Source Project
-4
-5     Licensed under the Apache License, Version 2.0 (the "License");
-6     you may not use this file except in compliance with the License.
-7     You may obtain a copy of the License at
-8
-9          http://www.apache.org/licenses/LICENSE-2.0
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.android.sunshine"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="14"
+8-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml
 10
-11     Unless required by applicable law or agreed to in writing, software
-12     distributed under the License is distributed on an "AS IS" BASIS,
-13     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-14     See the License for the specific language governing permissions and
-15     limitations under the License.
-16-->
-17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-18    package="com.example.android.sunshine"
-19    android:versionCode="1"
-20    android:versionName="1.0" >
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:8:5-66
+11-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:8:22-64
+12
+13    <application
+13-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:10:5-63:19
+14        android:allowBackup="true"
+14-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:11:9-35
+15        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+15-->[com.android.support:support-compat:28.0.0] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/dd1cf78f22bdd94f550130b281f27c97/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:12:9-43
+18        android:label="@string/app_name"
+18-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:13:9-41
+19        android:supportsRtl="true"
+19-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:14:9-35
+20        android:theme="@style/AppTheme" >
+20-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:15:9-40
 21
-22    <uses-sdk
-23        android:minSdkVersion="14"
-23-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml
-24        android:targetSdkVersion="26" />
-24-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml
-25
-26    <!-- This permission is necessary in order for Sunshine to perform network access. -->
-27    <uses-permission android:name="android.permission.INTERNET" />
-27-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:22:5-66
-27-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:22:22-64
-28
-29    <application
-29-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:24:5-77:19
-30        android:allowBackup="true"
-30-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:25:9-35
-31        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-31-->[com.android.support:support-compat:28.0.0] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/dd1cf78f22bdd94f550130b281f27c97/support-compat-28.0.0/AndroidManifest.xml:22:18-91
-32        android:debuggable="true"
-33        android:icon="@mipmap/ic_launcher"
-33-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:26:9-43
-34        android:label="@string/app_name"
-34-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:27:9-41
-35        android:supportsRtl="true"
-35-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:28:9-35
-36        android:theme="@style/AppTheme" >
-36-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:29:9-40
-37
-38        <!-- The manifest entry for our MainActivity. Each Activity requires a manifest entry -->
-39        <activity
-39-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:32:9-41:20
-40            android:name="com.example.android.sunshine.MainActivity"
-40-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:33:13-41
-41            android:label="@string/app_name"
-41-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:34:13-45
-42            android:launchMode="singleTop"
-42-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:35:13-43
-43            android:theme="@style/AppTheme.Forecast" >
-43-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:36:13-53
-44            <intent-filter>
-44-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:37:13-40:29
-45                <action android:name="android.intent.action.MAIN" />
-45-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:38:17-68
-45-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:38:25-66
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:39:17-76
-47-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:39:27-74
-48            </intent-filter>
-49        </activity>
-50
-51        <!-- The manifest entry for our DetailActivity. Each Activity requires a manifest entry -->
-52        <activity
-52-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:44:9-52:20
-53            android:name="com.example.android.sunshine.DetailActivity"
-53-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:45:13-43
-54            android:label="@string/title_activity_detail"
-54-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:46:13-58
-55            android:parentActivityName="com.example.android.sunshine.MainActivity"
-55-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:47:13-55
-56            android:theme="@style/AppTheme" >
-56-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:48:13-44
-57            <meta-data
-57-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:49:13-51:48
-58                android:name="android.support.PARENT_ACTIVITY"
-58-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:50:17-63
-59                android:value=".MainActivity" />
-59-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:51:17-46
-60        </activity>
-61
-62        <!-- The manifest entry for our SettingsActivity. Each Activity requires a manifest entry -->
-63        <activity android:name="com.example.android.sunshine.SettingsActivity" />
-63-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:55:9-53
-63-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:55:19-51
-64
-65        <!-- Our ContentProvider -->
-66        <provider
-66-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:58:9-61:39
-67            android:name="com.example.android.sunshine.data.WeatherProvider"
-67-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:59:13-49
-68            android:authorities="@string/content_authority"
-68-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:60:13-60
-69            android:exported="false" />
-69-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:61:13-37
-70
-71        <!-- This is required for immediate syncs -->
-72        <service
-72-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:64:9-66:40
-73            android:name="com.example.android.sunshine.sync.SunshineSyncIntentService"
-73-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:65:13-59
-74            android:exported="false" />
-74-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:66:13-37
-75
-76        <!-- This is the Service declaration used in conjunction with FirebaseJobDispatcher -->
-77        <service
-77-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:69:9-75:19
-78            android:name="com.example.android.sunshine.sync.SunshineFirebaseJobService"
-78-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:70:13-60
-79            android:exported="false" >
-79-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:71:13-37
-80            <intent-filter>
-80-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:72:13-74:29
-81                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
-81-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:73:17-83
-81-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:73:25-81
-82            </intent-filter>
-83        </service>
-84
-85        <!--
-86             Receives GooglePlay execution requests and forwards them to the
-87             appropriate internal service.
-88        -->
-89        <service
-89-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:32:9-39:19
-90            android:name="com.firebase.jobdispatcher.GooglePlayReceiver"
-90-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:33:13-73
-91            android:exported="true"
-91-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:34:13-36
-92            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
-92-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:35:13-93
-93            <intent-filter>
-93-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:36:13-38:29
-94                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
-94-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:37:17-87
-94-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:37:25-84
-95            </intent-filter>
-96        </service>
-97    </application>
-98
-99</manifest>
+22        <!-- The manifest entry for our MainActivity. Each Activity requires a manifest entry -->
+23        <activity
+23-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:18:9-27:20
+24            android:name="com.example.android.sunshine.MainActivity"
+24-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:19:13-41
+25            android:label="@string/app_name"
+25-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:20:13-45
+26            android:launchMode="singleTop"
+26-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:21:13-43
+27            android:theme="@style/AppTheme.Forecast" >
+27-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:22:13-53
+28            <intent-filter>
+28-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:23:13-26:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:24:17-68
+29-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:24:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:25:17-76
+31-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:25:27-74
+32            </intent-filter>
+33        </activity>
+34
+35        <!-- The manifest entry for our DetailActivity. Each Activity requires a manifest entry -->
+36        <activity
+36-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:30:9-38:20
+37            android:name="com.example.android.sunshine.DetailActivity"
+37-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:31:13-43
+38            android:label="@string/title_activity_detail"
+38-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:32:13-58
+39            android:parentActivityName="com.example.android.sunshine.MainActivity"
+39-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:33:13-55
+40            android:theme="@style/AppTheme" >
+40-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:34:13-44
+41            <meta-data
+41-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:35:13-37:48
+42                android:name="android.support.PARENT_ACTIVITY"
+42-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:36:17-63
+43                android:value=".MainActivity" />
+43-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:37:17-46
+44        </activity>
+45
+46        <!-- The manifest entry for our SettingsActivity. Each Activity requires a manifest entry -->
+47        <activity android:name="com.example.android.sunshine.SettingsActivity" />
+47-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:41:9-53
+47-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:41:19-51
+48
+49        <!-- Our ContentProvider -->
+50        <provider
+50-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:44:9-47:39
+51            android:name="com.example.android.sunshine.data.WeatherProvider"
+51-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:45:13-49
+52            android:authorities="@string/content_authority"
+52-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:46:13-60
+53            android:exported="false" />
+53-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:47:13-37
+54
+55        <!-- This is required for immediate syncs -->
+56        <service
+56-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:50:9-52:40
+57            android:name="com.example.android.sunshine.sync.SunshineSyncIntentService"
+57-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:51:13-59
+58            android:exported="false" />
+58-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:52:13-37
+59
+60        <!-- This is the Service declaration used in conjunction with FirebaseJobDispatcher -->
+61        <service
+61-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:55:9-61:19
+62            android:name="com.example.android.sunshine.sync.SunshineFirebaseJobService"
+62-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:56:13-60
+63            android:exported="false" >
+63-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:57:13-37
+64            <intent-filter>
+64-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:58:13-60:29
+65                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+65-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:59:17-83
+65-->/Users/depedisfl/StudioProjects/Sunshine/app/src/main/AndroidManifest.xml:59:25-81
+66            </intent-filter>
+67        </service>
+68
+69        <!--
+70             Receives GooglePlay execution requests and forwards them to the
+71             appropriate internal service.
+72        -->
+73        <service
+73-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:32:9-39:19
+74            android:name="com.firebase.jobdispatcher.GooglePlayReceiver"
+74-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:33:13-73
+75            android:exported="true"
+75-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:34:13-36
+76            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+76-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:35:13-93
+77            <intent-filter>
+77-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:36:13-38:29
+78                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+78-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:37:17-87
+78-->[com.firebase:firebase-jobdispatcher:0.8.5] /Users/depedisfl/.gradle/caches/transforms-2/files-2.1/b528be880036369e79445e0eeabd3708/firebase-jobdispatcher-0.8.5/AndroidManifest.xml:37:25-84
+79            </intent-filter>
+80        </service>
+81    </application>
+82
+83</manifest>

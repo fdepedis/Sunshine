@@ -1,4 +1,4 @@
-#Wed Sep 18 16:14:03 CEST 2019
+#Mon Mar 02 22:47:21 CET 2020
 base.0=/Users/depedisfl/StudioProjects/Sunshine/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

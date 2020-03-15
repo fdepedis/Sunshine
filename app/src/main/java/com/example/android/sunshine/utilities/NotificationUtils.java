@@ -1,5 +1,6 @@
 package com.example.android.sunshine.utilities;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,7 +10,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.support.v4.app.NotificationCompat;
+import android.os.Build;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.content.ContextCompat;
 
@@ -102,39 +103,42 @@ public class NotificationUtils {
              * finally the text of the notification, which in our case in a summary of today's
              * forecast.
              */
-            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context)
-                    .setColor(ContextCompat.getColor(context,R.color.colorPrimary))
-                    .setSmallIcon(smallArtResourceId)
-                    .setLargeIcon(largeIcon)
-                    .setContentTitle(notificationTitle)
-                    .setContentText(notificationText)
-                    .setAutoCancel(true);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-            /*
-             * This Intent will be triggered when the user clicks the notification. In our case,
-             * we want to open Sunshine to the DetailActivity to display the newly updated weather.
-             */
-            Intent detailIntentForToday = new Intent(context, DetailActivity.class);
-            detailIntentForToday.setData(todaysWeatherUri);
+                Notification.Builder notificationBuilder = new Notification.Builder(context)
+                        .setColor(ContextCompat.getColor(context,R.color.colorPrimary))
+                        .setSmallIcon(smallArtResourceId)
+                        .setLargeIcon(largeIcon)
+                        .setContentTitle(notificationTitle)
+                        .setContentText(notificationText)
+                        .setAutoCancel(true);
 
-            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(context);
-            taskStackBuilder.addNextIntentWithParentStack(detailIntentForToday);
-            PendingIntent resultPendingIntent = taskStackBuilder
-                    .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+                /*
+                 * This Intent will be triggered when the user clicks the notification. In our case,
+                 * we want to open Sunshine to the DetailActivity to display the newly updated weather.
+                 */
+                Intent detailIntentForToday = new Intent(context, DetailActivity.class);
+                detailIntentForToday.setData(todaysWeatherUri);
 
-            notificationBuilder.setContentIntent(resultPendingIntent);
+                TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(context);
+                taskStackBuilder.addNextIntentWithParentStack(detailIntentForToday);
+                PendingIntent resultPendingIntent = taskStackBuilder
+                        .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-            NotificationManager notificationManager = (NotificationManager)
-                    context.getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationBuilder.setContentIntent(resultPendingIntent);
 
-            /* WEATHER_NOTIFICATION_ID allows you to update or cancel the notification later on */
-            notificationManager.notify(WEATHER_NOTIFICATION_ID, notificationBuilder.build());
+                NotificationManager notificationManager = (NotificationManager)
+                        context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-            /*
-             * Since we just showed a notification, save the current time. That way, we can check
-             * next time the weather is refreshed if we should show another notification.
-             */
-            SunshinePreferences.saveLastNotificationTime(context, System.currentTimeMillis());
+                /* WEATHER_NOTIFICATION_ID allows you to update or cancel the notification later on */
+                notificationManager.notify(WEATHER_NOTIFICATION_ID, notificationBuilder.build());
+
+                /*
+                 * Since we just showed a notification, save the current time. That way, we can check
+                 * next time the weather is refreshed if we should show another notification.
+                 */
+                SunshinePreferences.saveLastNotificationTime(context, System.currentTimeMillis());
+            }
         }
 
         /* Always close your cursor when you're done with it to avoid wasting resources. */
