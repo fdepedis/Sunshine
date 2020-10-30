@@ -115,10 +115,8 @@ public class DetailActivity extends AppCompatActivity implements
      * This is where we inflate and set up the menu for this Activity.
      *
      * @param menu The options menu in which you place your items.
-     *
      * @return You must return true for the menu to be displayed;
-     *         if you return false it will not be shown.
-     *
+     * if you return false it will not be shown.
      * @see android.app.Activity#onPrepareOptionsMenu(Menu)
      * @see #onOptionsItemSelected
      */
@@ -138,7 +136,6 @@ public class DetailActivity extends AppCompatActivity implements
      * DetailActivity's parent Activity in the AndroidManifest.
      *
      * @param item The menu item that was selected by the user
-     *
      * @return true if you handle the menu click here, false otherwise
      */
     @Override
@@ -181,9 +178,8 @@ public class DetailActivity extends AppCompatActivity implements
     /**
      * Creates and returns a CursorLoader that loads the data for our URI and stores it in a Cursor.
      *
-     * @param loaderId The loader ID for which we need to create a loader
+     * @param loaderId   The loader ID for which we need to create a loader
      * @param loaderArgs Any arguments supplied by the caller
-     *
      * @return A new Loader instance that is ready to start loading.
      */
     @Override

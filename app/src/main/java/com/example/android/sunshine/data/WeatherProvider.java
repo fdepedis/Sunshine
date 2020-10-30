@@ -1,18 +1,4 @@
-/*
- * Copyright (C) 2015 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.example.android.sunshine.data;
 
 import android.annotation.TargetApi;
@@ -72,48 +58,19 @@ public class WeatherProvider extends ContentProvider {
      */
     public static UriMatcher buildUriMatcher() {
 
-        /*
-         * All paths added to the UriMatcher have a corresponding code to return when a match is
-         * found. The code passed into the constructor of UriMatcher here represents the code to
-         * return for the root URI. It's common to use NO_MATCH as the code for this case.
-         */
+        
         final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
         final String authority = WeatherContract.CONTENT_AUTHORITY;
-
-        /*
-         * For each type of URI you want to add, create a corresponding code. Preferably, these are
-         * constant fields in your class so that you can use them throughout the class and you no
-         * they aren't going to change. In Sunshine, we use CODE_WEATHER or CODE_WEATHER_WITH_DATE.
-         */
 
         /* This URI is content://com.example.android.sunshine/weather/ */
         matcher.addURI(authority, WeatherContract.PATH_WEATHER, CODE_WEATHER);
 
-        /*
-         * This URI would look something like content://com.example.android.sunshine/weather/1472214172
-         * The "/#" signifies to the UriMatcher that if PATH_WEATHER is followed by ANY number,
-         * that it should return the CODE_WEATHER_WITH_DATE code
-         */
         matcher.addURI(authority, WeatherContract.PATH_WEATHER + "/#", CODE_WEATHER_WITH_DATE);
 
         return matcher;
     }
 
-    /**
-     * In onCreate, we initialize our content provider on startup. This method is called for all
-     * registered content providers on the application main thread at application launch time.
-     * It must not perform lengthy operations, or application startup will be delayed.
-     *
-     * Nontrivial initialization (such as opening, upgrading, and scanning
-     * databases) should be deferred until the content provider is used (via {@link #query},
-     * {@link #bulkInsert(Uri, ContentValues[])}, etc).
-     *
-     * Deferred initialization keeps application startup fast, avoids unnecessary work if the
-     * provider turns out not to be needed, and stops database errors (such as a full disk) from
-     * halting application launch.
-     *
-     * @return true if the provider was successfully loaded, false otherwise
-     */
+    
     @Override
     public boolean onCreate() {
         /*
